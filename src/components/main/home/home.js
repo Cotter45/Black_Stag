@@ -76,7 +76,6 @@ export default function Home() {
 
     const [state, setIndex] = useState(0);
 
-
     useEffect(() => {
         const interval = setInterval(() => {
             if (state > images.length / 2 + 1) {

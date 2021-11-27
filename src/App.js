@@ -6,7 +6,9 @@ import Home from "./components/main/home/home";
 import Services from "./components/main/services/services.js";
 import Contact from "./components/main/contact/contact";
 
-
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 
 function App() {
   return (
