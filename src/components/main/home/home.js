@@ -121,7 +121,7 @@ export default function Home() {
                 </div>
                 <div className='home-content-text2'>
                     <p>
-                        I started my career in the construction industry in 2013, working my way up specializing in blacktop, concrete and natural gas.
+                        I started my career in the construction industry in 2011, working my way up specializing in blacktop, concrete and natural gas.
                         I have worked on a variety of construction projects, from small homes, large multi-family buildings to large commercial and civil projects.
                         I have a passion for building and maintaining beautiful homes and landscapes.
                     </p>
