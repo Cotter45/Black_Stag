@@ -44,6 +44,18 @@ html, body, #root {
   border-radius: 5px;
 }
 
+.reverse-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(199, 183, 91);
+  padding: 2vh 0;
+  border-radius: 5px;
+}
+
 .navbar {
   width: 95%;
   max-width: 1400px;
@@ -55,10 +67,30 @@ html, body, #root {
   color: rgb(199, 183, 91);
 }
 
+.reverse-navbar {
+  width: 95%;
+  max-width: 1400px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* color: rgb(199, 183, 91); */
+  color: rgb(5, 51, 5);
+}
+
 .navbar > h1 {
   font-size: 2.5vw;
   font-weight: bold;
   cursor: pointer;
+}
+
+.reverse-navbar > h1 {
+  font-size: 2.5vw;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
 .logo {
@@ -91,7 +123,27 @@ html, body, #root {
 
 .nav-button:hover {
   background-color: rgb(165, 146, 35);
+  color: rgb(5, 51, 5);
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: all .5s ease 0s;
+}
+
+.reverse-button {
+  text-transform: uppercase;
+  background-color: rgb(5, 51, 5);
+  border: 1px solid rgb(5, 51, 5);
   color: white;
+  padding: 1vh 1vw;
+  font-size: 1.5vw;
+  display: inline-block;
+  transition: all .5s ease 0s;
+  cursor: pointer;
+}
+
+.reverse-button:hover {
+  background-color: rgb(5, 51, 5);
+  color: rgb(165, 146, 35);
   border: 1px solid white;
   border-radius: 5px;
   transition: all .5s ease 0s;
@@ -100,8 +152,8 @@ html, body, #root {
 .home-main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-end;
+  /* justify-content: flex-start; */
   width: 100%;
   height: 100%;
   padding: 2vh 0;
@@ -125,8 +177,8 @@ html, body, #root {
 
 .home-carousel > img {
   width: 48%;
-  height: 400px;
-  max-height: 450px;
+  height: 500px;
+  max-height: 650px;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -137,21 +189,56 @@ html, body, #root {
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  top: 450px;
+  top: 500px;
+  gap: 2vh;
+  padding-bottom: 5vh;
 }
 
 .home-content-container {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid rgb(5, 51, 5);
+}
+
+.home-content-container1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid rgb(5, 51, 5);
+  margin-bottom: 5vh;
 }
 
 .home-content-text {
-  width: 50%;
+  width: 70%;
   text-indent: 15px;
   white-space: initial;
-  /* line-height: 1.3vh; */
+  /* line-height: 2vh; */
   font-size: 1.5vw;
+  background-color: rgb(5, 51, 5);
+  color: rgb(199, 183, 91);
+  padding: 1vh 1vw;
+  border-radius: 5px;
+}
+
+.home-content-text2 {
+  width: 70%;
+  text-indent: 15px;
+  white-space: initial;
+  /* line-height: 2vh; */
+  font-size: 1.5vw;
+  color: rgb(5, 51, 5);
+  background-color: rgb(199, 183, 91);
+  padding: 1vh 1vw;
+  border-radius: 5px;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  margin-top: 2vh;
 }
 
 .home-card {
@@ -166,7 +253,7 @@ html, body, #root {
   cursor: pointer;
   width: 100%;
   height: auto;
-  max-height: 450px;
+  max-height: 300px;
   max-width: 450px;
   border-radius: 5px;
   object-fit: cover;
@@ -176,4 +263,17 @@ html, body, #root {
   position: absolute;
   bottom: 0;
   cursor: pointer;
+}
+
+.right {
+  align-self: flex-end;
+}
+
+.left {
+  align-self: flex-start;
+}
+
+.link {
+  text-decoration: underline;
+  color: white;
 }
