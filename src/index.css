@@ -41,7 +41,7 @@ html, body, #root {
   height: fit-content;
   background-color: rgb(5, 51, 5);
   padding: 2vh 0;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .reverse-nav {
@@ -175,7 +175,7 @@ html, body, #root {
   width: 100%;
 }
 
-.home-carousel > img {
+.home-carousel > picture > img {
   width: 48%;
   height: 500px;
   max-height: 650px;

@@ -56,35 +56,110 @@ export default function Services() {
 
     return (
         <div className='container'>
+            <h1>Some of our most popular services</h1>
             <Tree name="Indoor Services" defaultOpen>
-              <Tree name="Painting" />
+              <Tree name="Painting">
+                <Tree name="Walls" />
+                <Tree name="Flooring" />
+                <Tree name="Ceiling" />
+                <Tree name="Windows" />
+                <Tree name="Doors" />
+                <Tree name="Cabinets" />
+              </Tree>
               <Tree name="Flooring">
-                <Tree name="Vinyl" />
-                <Tree name="Tile" />
-                <Tree name="Hardwood">
-                  <Tree name="child 1" style={{ color: '#37ceff' }} />
-                  <Tree name="child 2" style={{ color: '#37ceff' }} />
-                  <Tree name="child 3" style={{ color: '#37ceff' }} />
-                  <Tree name="custom content">
-                    {/* <div
-                      style={{
-                        position: 'relative',
-                        width: '100%',
-                        height: 200,
-                        padding: 10,
-                      }}>
-                      <div
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          background: 'black',
-                          borderRadius: 5,
-                        }}
-                      />
-                    </div> */}
-                  </Tree>
+                <Tree name="Vinyl / Laminate">
+                  <div style={{
+                      position: 'relative',
+                      width: '100%',
+                      height: 'fit-content',
+                      padding: 10,
+                      whiteSpace: 'initial',
+                    }}>
+                    <p>
+                      Vinyl is a popular flooring material that is easy to install and easy to maintain.
+                    </p>
+                  </div>
                 </Tree>
-                <Tree name="hello" />
+                <Tree name="Tile">
+                  <div style={{
+                      position: 'relative',
+                      width: '100%',
+                      height: 'fit-content',
+                      padding: 10,
+                      whiteSpace: 'initial',
+                    }}>
+                    <p>
+                      Tile is a popular flooring material that is easy to install and easy to maintain.
+                    </p>
+                  </div>
+                </Tree>
+                <Tree name="Carpet">
+                  <div style={{
+                      position: 'relative',
+                      width: '100%',
+                      height: 'fit-content',
+                      padding: 10,
+                      whiteSpace: 'initial',
+                    }}>
+                    <p>
+                      Carpet is a popular flooring material that is easy to install and easy to maintain.
+                    </p>
+                  </div>
+                </Tree>
+                <Tree name="Hardwood">
+                  <div style={{
+                      position: 'relative',
+                      width: '100%',
+                      height: 'fit-content',
+                      padding: 10,
+                      whiteSpace: 'initial',
+                    }}>
+                    <p>
+                      Hardwood is a popular flooring material that is easy to install and easy to maintain.
+                    </p>
+                  </div>
+                </Tree>
+              </Tree>
+              <Tree name="Kitchens">
+                <Tree name="Cabinets">
+                  <div style={{
+                      position: 'relative',
+                      width: '100%',
+                      height: 'fit-content',
+                      padding: 10,
+                      whiteSpace: 'initial',
+                    }}>
+                    <p>
+                      Cabinets are a popular flooring material that is easy to install and easy to maintain.
+                    </p>
+                  </div>
+                </Tree>
+                <Tree name="Countertops">
+                  <div style={{
+                      position: 'relative',
+                      width: '100%',
+                      height: 'fit-content',
+                      padding: 10,
+                      whiteSpace: 'initial',
+                    }}>
+                    <p>
+                      Countertops are a popular flooring material that is easy to install and easy to maintain.
+                    </p>
+                  </div>
+                </Tree>
+                <Tree name="Utility / Appliances">
+                  <Tree name="Sinks" />
+                  <Tree name="Dishwashers" />
+                  <Tree name="Fridges" />
+                  <Tree name="Ovens" />
+                </Tree>
+                <Tree name="Backsplashes">
+                  <Tree name="Tile" />
+                  <Tree name="Vinyl" />
+                  <Tree name="Laminate" />
+                  <Tree name="Shiplap" />
+                  <Tree name="Brick / Mason stone" />
+                </Tree>
               </Tree>
               <Tree name="world" />
               <Tree name={<span>🙀 something something</span>} />

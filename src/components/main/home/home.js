@@ -16,6 +16,19 @@ const images = [
     '/images/home_images/sidewalk_prep.png',
 ]
 
+const webpImages = [
+    '/images/home_images/after_deck.webp',
+    '/images/home_images/deck.webp',
+    '/images/home_images/after_living_room.webp',
+    '/images/home_images/living_room.webp',
+    '/images/home_images/deck_after.webp',
+    '/images/home_images/deck_pre.webp',
+    '/images/home_images/sidewalk.webp',
+    '/images/home_images/sidewalk_grade.webp',
+    '/images/home_images/sidewalk_after.webp',
+    '/images/home_images/sidewalk_prep.webp',
+]
+
 const calc = (x, y, rect) => [
   -(y - rect.top - rect.height / 2) / 5,
   (x - rect.left - rect.width / 2) / 5,
@@ -70,8 +83,16 @@ export default function Home() {
             <h1 className='left'>Recent project highlights</h1>
             {transitions((style, index) => (
                 <animated.div className='home-carousel' style={{ position: 'relative' }}>
-                    <animated.img src={images[index]} alt='workers' style={{...style, position: 'absolute', right: '1vw', zIndex: '-1' }} />
-                    <animated.img src={images[index + 1]} alt='workers' style={{...style, position: 'absolute', left: '1vw', zIndex: '-1'}} />
+                    <picture>
+                        <source srcSet={webpImages[index]} type='image/webp' />
+                        <source srcSet={images[index]} type='image/png' />
+                        <animated.img height='400px' width='400px' src={images[index]} alt='workers' style={{...style, position: 'absolute', right: '1vw', zIndex: '-1' }} />
+                    </picture>
+                    <picture>
+                        <source srcSet={webpImages[index + 1]} type='image/webp' />
+                        <source srcSet={images[index + 1]} type='image/png' />
+                        <animated.img height='400px' width='400px' src={images[index + 1]} alt='workers' style={{...style, position: 'absolute', left: '1vw', zIndex: '-1'}} />
+                    </picture>
                 </animated.div>
             ))}
         </section>
