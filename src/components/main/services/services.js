@@ -19,7 +19,6 @@ function usePrevious(value) {
     ref.current = value
     return () => ref.current = false;
   }, [value])
-  console.log(ref.current)
   return ref.current
 }
 
