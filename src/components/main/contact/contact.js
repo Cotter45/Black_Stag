@@ -36,7 +36,7 @@ function MessageHub({
     children((msg) => {
       setItems(state => [...state, { key: id++, msg }])
     })
-  }, [])
+  }, [children])
 
   return (
     <div className='message-container'>
