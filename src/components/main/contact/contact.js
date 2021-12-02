@@ -1,5 +1,5 @@
 import { useForm, ValidationError } from '@formspree/react';
-import { useState, useEffect, useRef, useMemo, MouseEvent } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { useTransition, animated } from '@react-spring/web';
 
 let id = 0;
@@ -92,6 +92,10 @@ export default function Contact() {
     }, [name, email, message, success]);
 
     const [state, handleSubmit] = useForm("xgedwlzl");
+    // const handleSubmit = (e) => {
+    //   e.preventDefault();
+    //   console.log('stuff')
+    // }
     // if (state.succeeded) {
     //     return (
     //         <div className="contact-main">
@@ -188,8 +192,8 @@ export default function Contact() {
                 </div>
                 <button onClick={handleClick} className='submit' type="submit" disabled={errors.length || state.submitting ? true : false}>
                     Submit
-                    <MessageHub children={add => ref.current = add} />
                 </button>
+                <MessageHub children={add => ref.current = add} />
                 {errors.length > 0 && <p className='warning'>Please fill out all fields</p>}
                 {success && <p className='success'>Thank you for your message!</p>}
             </form>
