@@ -38,28 +38,19 @@ const calc = (x, y, rect) => [
 const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-function preloadImages(array) {
-    if (!preloadImages.list) {
-        preloadImages.list = [];
-    }
-    var list = preloadImages.list;
-    for (var i = 0; i < array.length; i++) {
-        var img = new Image();
-        img.onload = function() {
-            var index = list.indexOf(this);
-            if (index !== -1) {
-                // remove image from the array once it's loaded
-                // for memory consumption reasons
-                list.splice(index, 1);
-            }
-        }
-        list.push(img);
-        img.src = array[i];
-    }
+async function preloadImages(array) {
+    const promises = await array.map((src) => {
+        return new Promise( function (resolve, reject) {
+            const img = new Image();
+
+            img.src = src;
+            img.onload = resolve();
+            img.onerror = reject();
+        })
+    })
+    await Promise.all(promises);
 }
 
-preloadImages(images);
-preloadImages(webpImages);
 
 export default function Home() {
     const history = useHistory();
@@ -75,6 +66,12 @@ export default function Home() {
 
 
     const [state, setIndex] = useState(0);
+
+    useEffect(() => {
+
+        preloadImages(webpImages);
+        preloadImages(images);
+    })
 
     useEffect(() => {
         const interval = setInterval(() => {
